@@ -13,6 +13,14 @@ const AddUsers = () => {
     }
   const addUserHandler = (event) => {
     event.preventDefault();
+    if(enteredUserName.trim().length===0){
+        console.log("enter name")
+        return;
+    }
+    if(enteredAge<1){
+        console.log("invalid age")
+        return;
+    }
     console.log(enteredUserName+" "+enteredAge);
     setEnteredUserName('');
     setEnteredAge('');
